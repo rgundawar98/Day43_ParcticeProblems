@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Demo</title>
+    <style>
+        body{
+            padding: 2em;
+        }
+        .headerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer{
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+    
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .mainContentItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .sideBarLeftItem{
+            background: gold;
+            order: 1;
+            text-align: center;
+        }
+        .sideBarRightItem
+        {
+            background: hotpink;
+            order: 3;
+            text-align: center;
+        }
+        .sideBarItem{
+            flex: 1 0 0;
+            border: 5px solid green;
+        }
+        .mainContentItem{
+            order: 2;
+            flex: 3 0 0;
+        }
+        error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header class="headerContainer">
+        HEADER-Sample FlexBox Example
+    </header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia blanditiis totam possimus sapiente.
+                    Voluptates earum cumque eum magni veritatis quod aliquid. Eaque illum pariatur quasi iusto odio
+                    commodi beatae veritatis, voluptatem perferendis. Magnam asperiores quia soluta quos, quas
+                    reprehenderit laudantium! Possimus minima esse quod asperiores.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed atque maxime laudantium dolorum
+                    natus, veritatis eveniet fugiat saepe, reiciendis minus sit repudiandae! Quod ut nihil odio rerum
+                    illo, natus beatae quis aliquam nesciunt officiis totam in exercitationem blanditiis consequatur?
+                    Asperiores at nesciunt deleniti ex.</p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto quaerat blanditiis vel magni culpa
+                    unde adipisci, impedit odit optio ea sapiente repellendus ut, minus, eum necessitatibus repellat
+                    obcaecati voluptatum dolores illum. Blanditiis sequi quibusdam voluptatem similique vel nostrum quam
+                    sint veritatis. Cupiditate nemo ex qui!</p>
+            </article>
+        </section>
+        <sidebar class="sideBarItem sideBarLeftItem">Left Side Bar</sidebar>
+        <sidebar class="sideBarItem sideBarRightItem">Right Side Bar</sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+    <script type="text/javscript"></script>
+</body>
+</html>
